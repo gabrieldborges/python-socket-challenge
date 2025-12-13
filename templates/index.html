@@ -10,7 +10,10 @@
    <body>
     <div class="container">
 
-        <ul id="messages" class=""></ul>
+        <ul id="messages" class="">
+       
+           
+        </ul>
         <form id="form" action="" class="">
             <input id="input" autocomplete="off" /><button>Enviar</button>
         </form>
@@ -24,12 +27,14 @@
                var ul = document.getElementById('messages');
                var li = document.createElement('li');
                li.appendChild(document.createTextNode(msg));
-               ul.appendChild(li);
+               ul.insertBefore(li, ul.firstChild);
            });
 
            document.getElementById('form').onsubmit = function() {
-               socket.emit('message', document.getElementById('input').value);
+               var msg =  document.getElementById('input').value
+               socket.emit('message', msg);
                document.getElementById('input').value = '';
+               console.log(msg)
                return false;
            };
        </script>

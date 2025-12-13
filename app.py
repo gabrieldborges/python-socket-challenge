@@ -1,5 +1,5 @@
 from flask import Flask , render_template
-from flask_socketio import SocketIO
+from flask_socketio import SocketIO , emit
 
 
 app = Flask(__name__)
@@ -14,7 +14,10 @@ def index():
 
 
 
-
+@socketio.on('message')
+def detect_message(msg):
+    print("Message detected")
+    socketio.emit('message', msg)
 
 
 

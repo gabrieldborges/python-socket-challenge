@@ -10,14 +10,72 @@ body {
     position: relative;
     /* border: solid red 3px; */
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding-block: 10rem;
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 1rem 2rem;
     background-color: rgb(27, 36, 116);
     border-radius: 8px;
+    height: 100%;
+    width: 30vh;
+    
+    
+}
 
-    border: solid white;
+ul{
+    /\/\*\*/ INSERT_YOUR_CODE */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    scrollbar-width: None;
+    -ms-overflow-style: none;
+
+
+    max-height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    width: 100%;
+    scroll-behavior: smooth;
+
+}
+li{
+    margin-top: auto;
+    background-color: rgb(72, 72, 171);
+    border-radius: 4px;
+
+    padding: .25rem .45rem;
+    margin-bottom: .2rem;
+    min-height: 1.25rem;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+form {
+    display: flex;
+    width: 100%;
+}
+
+form input {
+    border-radius: 4px;
+
+    flex: 2 1 0%;
+    min-width: 0; /* Prevent overflow */
+}
+
+form button {
+    border-radius: 4px;
+
+    flex: 1 1 0%;
+    min-width: 0;
 }
