@@ -1,0 +1,35 @@
+Python 3.12.12
+ON THE TERMINAL
+
+//enter enviroment -- learn more about this
+source .venv/bin/activate  
+
+
+
+
+python -m venv .venv
+# Mac / Linux
+source .venv/bin/activate
+
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+
+use the same python version Python 3.12.12
+
+#To run the database docker - on the terminal - on the enviroment
+docker compose up
+
+# To remove the data structure - on flask shell
+db.drop_all() 
+db.session.commit()
+
+#to create the data structure
+db.create_all()
+db.session.commit()
+
+
+#Jeito antigo
+pip3 install -r requirements.txt --upgrade pip
+
+#Jeito Novo - Garante que o pip utilizado será compatível com o python desejado dentro da venv
+python -m pip install -r requirements.txt

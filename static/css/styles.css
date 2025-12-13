@@ -1,0 +1,23 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(27, 27, 103);
+    position: relative;
+    /* border: solid red 3px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 1rem 2rem;
+    background-color: rgb(27, 36, 116);
+    border-radius: 8px;
+
+    border: solid white;
+}
